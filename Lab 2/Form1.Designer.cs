@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            BrowseBtn_Click = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
             button3 = new Button();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
+            courseNumberTxtBox = new TextBox();
+            courseCodeTxtBox = new TextBox();
+            courseDescTxtBox = new TextBox();
+            unitLecTxtBox = new TextBox();
+            unitLabTxtBox = new TextBox();
+            timeTxtBox = new TextBox();
+            dayTxtBox = new TextBox();
+            creditUnitsTxtBox = new TextBox();
+            totalNumunitsTxtBox = new TextBox();
             textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
+            totalTutionfeeTxtBox = new TextBox();
+            totalMiscfeeTxtBox = new TextBox();
             textBox18 = new TextBox();
             textBox19 = new TextBox();
-            textBox20 = new TextBox();
+            totalTuitionAndFeeTxtBox = new TextBox();
             textBox29 = new TextBox();
             textBox30 = new TextBox();
             textBox31 = new TextBox();
             textBox32 = new TextBox();
             textBox33 = new TextBox();
-            textBox34 = new TextBox();
-            textBox35 = new TextBox();
-            textBox36 = new TextBox();
-            textBox37 = new TextBox();
-            Num = new ListBox();
-            Code = new ListBox();
-            CourseDesc = new ListBox();
-            UnitLec = new ListBox();
-            UnitLab = new ListBox();
-            CreditUnits = new ListBox();
-            Time = new ListBox();
-            Day = new ListBox();
+            computerLabTxtBox = new TextBox();
+            CiscoTxtBox = new TextBox();
+            examBookletTxtBox = new TextBox();
+            totalOtherfeeTxtBox = new TextBox();
+            numListBox = new ListBox();
+            courseCodeListBox = new ListBox();
+            courseDescListBox = new ListBox();
+            unitLecListBox = new ListBox();
+            unitLabListBox = new ListBox();
+            creditUnitsListBox = new ListBox();
+            timeListBox = new ListBox();
+            dayListBox = new ListBox();
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
@@ -113,15 +113,15 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // BrowseBtn_Click
             // 
-            button1.Location = new Point(52, 169);
-            button1.Name = "button1";
-            button1.Size = new Size(85, 40);
-            button1.TabIndex = 1;
-            button1.Text = "Browse";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            BrowseBtn_Click.Location = new Point(52, 169);
+            BrowseBtn_Click.Name = "BrowseBtn_Click";
+            BrowseBtn_Click.Size = new Size(85, 40);
+            BrowseBtn_Click.TabIndex = 1;
+            BrowseBtn_Click.Text = "Browse";
+            BrowseBtn_Click.UseVisualStyleBackColor = true;
+            BrowseBtn_Click.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -141,13 +141,14 @@
             button2.TabIndex = 3;
             button2.Text = "Submit";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
             button3.BackColor = SystemColors.AppWorkspace;
-            button3.Location = new Point(692, 92);
+            button3.Location = new Point(693, 150);
             button3.Name = "button3";
-            button3.Size = new Size(127, 33);
+            button3.Size = new Size(127, 34);
             button3.TabIndex = 4;
             button3.Text = "New/ Cancel";
             button3.UseVisualStyleBackColor = false;
@@ -167,68 +168,68 @@
             textBox4.Size = new Size(154, 23);
             textBox4.TabIndex = 7;
             // 
-            // textBox6
+            // courseNumberTxtBox
             // 
-            textBox6.Location = new Point(117, 238);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(266, 23);
-            textBox6.TabIndex = 9;
+            courseNumberTxtBox.Location = new Point(117, 238);
+            courseNumberTxtBox.Name = "courseNumberTxtBox";
+            courseNumberTxtBox.Size = new Size(266, 23);
+            courseNumberTxtBox.TabIndex = 9;
             // 
-            // textBox7
+            // courseCodeTxtBox
             // 
-            textBox7.Location = new Point(117, 267);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(266, 23);
-            textBox7.TabIndex = 10;
+            courseCodeTxtBox.Location = new Point(117, 267);
+            courseCodeTxtBox.Name = "courseCodeTxtBox";
+            courseCodeTxtBox.Size = new Size(266, 23);
+            courseCodeTxtBox.TabIndex = 10;
             // 
-            // textBox8
+            // courseDescTxtBox
             // 
-            textBox8.Location = new Point(117, 296);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(266, 23);
-            textBox8.TabIndex = 11;
+            courseDescTxtBox.Location = new Point(117, 296);
+            courseDescTxtBox.Name = "courseDescTxtBox";
+            courseDescTxtBox.Size = new Size(266, 23);
+            courseDescTxtBox.TabIndex = 11;
             // 
-            // textBox9
+            // unitLecTxtBox
             // 
-            textBox9.Location = new Point(117, 325);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(266, 23);
-            textBox9.TabIndex = 12;
+            unitLecTxtBox.Location = new Point(117, 325);
+            unitLecTxtBox.Name = "unitLecTxtBox";
+            unitLecTxtBox.Size = new Size(266, 23);
+            unitLecTxtBox.TabIndex = 12;
             // 
-            // textBox10
+            // unitLabTxtBox
             // 
-            textBox10.Location = new Point(117, 354);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(266, 23);
-            textBox10.TabIndex = 13;
+            unitLabTxtBox.Location = new Point(117, 354);
+            unitLabTxtBox.Name = "unitLabTxtBox";
+            unitLabTxtBox.Size = new Size(266, 23);
+            unitLabTxtBox.TabIndex = 13;
             // 
-            // textBox11
+            // timeTxtBox
             // 
-            textBox11.Location = new Point(117, 383);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(266, 23);
-            textBox11.TabIndex = 14;
+            timeTxtBox.Location = new Point(117, 383);
+            timeTxtBox.Name = "timeTxtBox";
+            timeTxtBox.Size = new Size(266, 23);
+            timeTxtBox.TabIndex = 14;
             // 
-            // textBox12
+            // dayTxtBox
             // 
-            textBox12.Location = new Point(117, 412);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(266, 23);
-            textBox12.TabIndex = 15;
+            dayTxtBox.Location = new Point(117, 412);
+            dayTxtBox.Name = "dayTxtBox";
+            dayTxtBox.Size = new Size(266, 23);
+            dayTxtBox.TabIndex = 15;
             // 
-            // textBox13
+            // creditUnitsTxtBox
             // 
-            textBox13.Location = new Point(511, 223);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(266, 23);
-            textBox13.TabIndex = 16;
+            creditUnitsTxtBox.Location = new Point(511, 223);
+            creditUnitsTxtBox.Name = "creditUnitsTxtBox";
+            creditUnitsTxtBox.Size = new Size(266, 23);
+            creditUnitsTxtBox.TabIndex = 16;
             // 
-            // textBox14
+            // totalNumunitsTxtBox
             // 
-            textBox14.Location = new Point(511, 252);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(266, 23);
-            textBox14.TabIndex = 17;
+            totalNumunitsTxtBox.Location = new Point(511, 252);
+            totalNumunitsTxtBox.Name = "totalNumunitsTxtBox";
+            totalNumunitsTxtBox.Size = new Size(266, 23);
+            totalNumunitsTxtBox.TabIndex = 17;
             // 
             // textBox15
             // 
@@ -237,19 +238,19 @@
             textBox15.Size = new Size(266, 23);
             textBox15.TabIndex = 18;
             // 
-            // textBox16
+            // totalTutionfeeTxtBox
             // 
-            textBox16.Location = new Point(511, 310);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(266, 23);
-            textBox16.TabIndex = 19;
+            totalTutionfeeTxtBox.Location = new Point(511, 310);
+            totalTutionfeeTxtBox.Name = "totalTutionfeeTxtBox";
+            totalTutionfeeTxtBox.Size = new Size(266, 23);
+            totalTutionfeeTxtBox.TabIndex = 19;
             // 
-            // textBox17
+            // totalMiscfeeTxtBox
             // 
-            textBox17.Location = new Point(511, 339);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(266, 23);
-            textBox17.TabIndex = 20;
+            totalMiscfeeTxtBox.Location = new Point(511, 339);
+            totalMiscfeeTxtBox.Name = "totalMiscfeeTxtBox";
+            totalMiscfeeTxtBox.Size = new Size(266, 23);
+            totalMiscfeeTxtBox.TabIndex = 20;
             // 
             // textBox18
             // 
@@ -265,12 +266,12 @@
             textBox19.Size = new Size(266, 23);
             textBox19.TabIndex = 22;
             // 
-            // textBox20
+            // totalTuitionAndFeeTxtBox
             // 
-            textBox20.Location = new Point(511, 426);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(266, 23);
-            textBox20.TabIndex = 23;
+            totalTuitionAndFeeTxtBox.Location = new Point(511, 426);
+            totalTuitionAndFeeTxtBox.Name = "totalTuitionAndFeeTxtBox";
+            totalTuitionAndFeeTxtBox.Size = new Size(266, 23);
+            totalTuitionAndFeeTxtBox.TabIndex = 23;
             // 
             // textBox29
             // 
@@ -307,105 +308,105 @@
             textBox33.Size = new Size(266, 23);
             textBox33.TabIndex = 37;
             // 
-            // textBox34
+            // computerLabTxtBox
             // 
-            textBox34.Location = new Point(193, 768);
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(162, 23);
-            textBox34.TabIndex = 38;
+            computerLabTxtBox.Location = new Point(193, 768);
+            computerLabTxtBox.Name = "computerLabTxtBox";
+            computerLabTxtBox.Size = new Size(162, 23);
+            computerLabTxtBox.TabIndex = 38;
             // 
-            // textBox35
+            // CiscoTxtBox
             // 
-            textBox35.Location = new Point(193, 797);
-            textBox35.Name = "textBox35";
-            textBox35.Size = new Size(162, 23);
-            textBox35.TabIndex = 39;
+            CiscoTxtBox.Location = new Point(193, 797);
+            CiscoTxtBox.Name = "CiscoTxtBox";
+            CiscoTxtBox.Size = new Size(162, 23);
+            CiscoTxtBox.TabIndex = 39;
             // 
-            // textBox36
+            // examBookletTxtBox
             // 
-            textBox36.Location = new Point(193, 826);
-            textBox36.Name = "textBox36";
-            textBox36.Size = new Size(162, 23);
-            textBox36.TabIndex = 40;
+            examBookletTxtBox.Location = new Point(193, 826);
+            examBookletTxtBox.Name = "examBookletTxtBox";
+            examBookletTxtBox.Size = new Size(162, 23);
+            examBookletTxtBox.TabIndex = 40;
             // 
-            // textBox37
+            // totalOtherfeeTxtBox
             // 
-            textBox37.Location = new Point(193, 855);
-            textBox37.Name = "textBox37";
-            textBox37.Size = new Size(162, 23);
-            textBox37.TabIndex = 41;
+            totalOtherfeeTxtBox.Location = new Point(193, 855);
+            totalOtherfeeTxtBox.Name = "totalOtherfeeTxtBox";
+            totalOtherfeeTxtBox.Size = new Size(162, 23);
+            totalOtherfeeTxtBox.TabIndex = 41;
             // 
-            // Num
+            // numListBox
             // 
-            Num.FormattingEnabled = true;
-            Num.ItemHeight = 15;
-            Num.Location = new Point(16, 478);
-            Num.Name = "Num";
-            Num.Size = new Size(48, 199);
-            Num.TabIndex = 42;
+            numListBox.FormattingEnabled = true;
+            numListBox.ItemHeight = 15;
+            numListBox.Location = new Point(16, 478);
+            numListBox.Name = "numListBox";
+            numListBox.Size = new Size(48, 199);
+            numListBox.TabIndex = 42;
             // 
-            // Code
+            // courseCodeListBox
             // 
-            Code.FormattingEnabled = true;
-            Code.ItemHeight = 15;
-            Code.Location = new Point(66, 478);
-            Code.Name = "Code";
-            Code.Size = new Size(117, 199);
-            Code.TabIndex = 43;
+            courseCodeListBox.FormattingEnabled = true;
+            courseCodeListBox.ItemHeight = 15;
+            courseCodeListBox.Location = new Point(66, 478);
+            courseCodeListBox.Name = "courseCodeListBox";
+            courseCodeListBox.Size = new Size(117, 199);
+            courseCodeListBox.TabIndex = 43;
             // 
-            // CourseDesc
+            // courseDescListBox
             // 
-            CourseDesc.FormattingEnabled = true;
-            CourseDesc.ItemHeight = 15;
-            CourseDesc.Location = new Point(172, 478);
-            CourseDesc.Name = "CourseDesc";
-            CourseDesc.Size = new Size(211, 199);
-            CourseDesc.TabIndex = 44;
+            courseDescListBox.FormattingEnabled = true;
+            courseDescListBox.ItemHeight = 15;
+            courseDescListBox.Location = new Point(172, 478);
+            courseDescListBox.Name = "courseDescListBox";
+            courseDescListBox.Size = new Size(211, 199);
+            courseDescListBox.TabIndex = 44;
             // 
-            // UnitLec
+            // unitLecListBox
             // 
-            UnitLec.FormattingEnabled = true;
-            UnitLec.ItemHeight = 15;
-            UnitLec.Location = new Point(378, 478);
-            UnitLec.Name = "UnitLec";
-            UnitLec.Size = new Size(71, 199);
-            UnitLec.TabIndex = 45;
+            unitLecListBox.FormattingEnabled = true;
+            unitLecListBox.ItemHeight = 15;
+            unitLecListBox.Location = new Point(378, 478);
+            unitLecListBox.Name = "unitLecListBox";
+            unitLecListBox.Size = new Size(71, 199);
+            unitLecListBox.TabIndex = 45;
             // 
-            // UnitLab
+            // unitLabListBox
             // 
-            UnitLab.FormattingEnabled = true;
-            UnitLab.ItemHeight = 15;
-            UnitLab.Location = new Point(440, 478);
-            UnitLab.Name = "UnitLab";
-            UnitLab.Size = new Size(56, 199);
-            UnitLab.TabIndex = 46;
+            unitLabListBox.FormattingEnabled = true;
+            unitLabListBox.ItemHeight = 15;
+            unitLabListBox.Location = new Point(440, 478);
+            unitLabListBox.Name = "unitLabListBox";
+            unitLabListBox.Size = new Size(56, 199);
+            unitLabListBox.TabIndex = 46;
             // 
-            // CreditUnits
+            // creditUnitsListBox
             // 
-            CreditUnits.FormattingEnabled = true;
-            CreditUnits.ItemHeight = 15;
-            CreditUnits.Location = new Point(493, 478);
-            CreditUnits.Name = "CreditUnits";
-            CreditUnits.Size = new Size(117, 199);
-            CreditUnits.TabIndex = 47;
+            creditUnitsListBox.FormattingEnabled = true;
+            creditUnitsListBox.ItemHeight = 15;
+            creditUnitsListBox.Location = new Point(493, 478);
+            creditUnitsListBox.Name = "creditUnitsListBox";
+            creditUnitsListBox.Size = new Size(117, 199);
+            creditUnitsListBox.TabIndex = 47;
             // 
-            // Time
+            // timeListBox
             // 
-            Time.FormattingEnabled = true;
-            Time.ItemHeight = 15;
-            Time.Location = new Point(600, 478);
-            Time.Name = "Time";
-            Time.Size = new Size(117, 199);
-            Time.TabIndex = 48;
+            timeListBox.FormattingEnabled = true;
+            timeListBox.ItemHeight = 15;
+            timeListBox.Location = new Point(600, 478);
+            timeListBox.Name = "timeListBox";
+            timeListBox.Size = new Size(117, 199);
+            timeListBox.TabIndex = 48;
             // 
-            // Day
+            // dayListBox
             // 
-            Day.FormattingEnabled = true;
-            Day.ItemHeight = 15;
-            Day.Location = new Point(712, 478);
-            Day.Name = "Day";
-            Day.Size = new Size(117, 199);
-            Day.TabIndex = 49;
+            dayListBox.FormattingEnabled = true;
+            dayListBox.ItemHeight = 15;
+            dayListBox.Location = new Point(712, 478);
+            dayListBox.Name = "dayListBox";
+            dayListBox.Size = new Size(117, 199);
+            dayListBox.TabIndex = 49;
             // 
             // dateTimePicker1
             // 
@@ -759,44 +760,44 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
-            Controls.Add(Day);
-            Controls.Add(Time);
-            Controls.Add(CreditUnits);
-            Controls.Add(UnitLab);
-            Controls.Add(UnitLec);
-            Controls.Add(CourseDesc);
-            Controls.Add(Code);
-            Controls.Add(Num);
-            Controls.Add(textBox37);
-            Controls.Add(textBox36);
-            Controls.Add(textBox35);
-            Controls.Add(textBox34);
+            Controls.Add(dayListBox);
+            Controls.Add(timeListBox);
+            Controls.Add(creditUnitsListBox);
+            Controls.Add(unitLabListBox);
+            Controls.Add(unitLecListBox);
+            Controls.Add(courseDescListBox);
+            Controls.Add(courseCodeListBox);
+            Controls.Add(numListBox);
+            Controls.Add(totalOtherfeeTxtBox);
+            Controls.Add(examBookletTxtBox);
+            Controls.Add(CiscoTxtBox);
+            Controls.Add(computerLabTxtBox);
             Controls.Add(textBox33);
             Controls.Add(textBox32);
             Controls.Add(textBox31);
             Controls.Add(textBox30);
             Controls.Add(textBox29);
-            Controls.Add(textBox20);
+            Controls.Add(totalTuitionAndFeeTxtBox);
             Controls.Add(textBox19);
             Controls.Add(textBox18);
-            Controls.Add(textBox17);
-            Controls.Add(textBox16);
+            Controls.Add(totalMiscfeeTxtBox);
+            Controls.Add(totalTutionfeeTxtBox);
             Controls.Add(textBox15);
-            Controls.Add(textBox14);
-            Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
+            Controls.Add(totalNumunitsTxtBox);
+            Controls.Add(creditUnitsTxtBox);
+            Controls.Add(dayTxtBox);
+            Controls.Add(timeTxtBox);
+            Controls.Add(unitLabTxtBox);
+            Controls.Add(unitLecTxtBox);
+            Controls.Add(courseDescTxtBox);
+            Controls.Add(courseCodeTxtBox);
+            Controls.Add(courseNumberTxtBox);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(BrowseBtn_Click);
             Controls.Add(pictureBox1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             Name = "Form1";
@@ -810,44 +811,44 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button BrowseBtn_Click;
         private TextBox textBox1;
         private Button button2;
         private Button button3;
         private TextBox textBox3;
         private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
+        private TextBox courseNumberTxtBox;
+        private TextBox courseCodeTxtBox;
+        private TextBox courseDescTxtBox;
+        private TextBox unitLecTxtBox;
+        private TextBox unitLabTxtBox;
+        private TextBox timeTxtBox;
+        private TextBox dayTxtBox;
+        private TextBox creditUnitsTxtBox;
+        private TextBox totalNumunitsTxtBox;
         private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
+        private TextBox totalTutionfeeTxtBox;
+        private TextBox totalMiscfeeTxtBox;
         private TextBox textBox18;
         private TextBox textBox19;
-        private TextBox textBox20;
+        private TextBox totalTuitionAndFeeTxtBox;
         private TextBox textBox29;
         private TextBox textBox30;
         private TextBox textBox31;
         private TextBox textBox32;
         private TextBox textBox33;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox36;
-        private TextBox textBox37;
-        private ListBox Num;
-        private ListBox Code;
-        private ListBox CourseDesc;
-        private ListBox UnitLec;
-        private ListBox UnitLab;
-        private ListBox CreditUnits;
-        private ListBox Time;
-        private ListBox Day;
+        private TextBox computerLabTxtBox;
+        private TextBox CiscoTxtBox;
+        private TextBox examBookletTxtBox;
+        private TextBox totalOtherfeeTxtBox;
+        private ListBox numListBox;
+        private ListBox courseCodeListBox;
+        private ListBox courseDescListBox;
+        private ListBox unitLecListBox;
+        private ListBox unitLabListBox;
+        private ListBox creditUnitsListBox;
+        private ListBox timeListBox;
+        private ListBox dayListBox;
         private DateTimePicker dateTimePicker1;
         private Label label1;
         private Label label2;
@@ -882,5 +883,6 @@
         private Label label30;
         private Label label31;
         private Label label32;
+        private Button calculate_BtnRd;
     }
 }

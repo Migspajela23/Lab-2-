@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,15 @@ namespace Lab_2
             comboBox1.Items.Add("Bachelor Of Science In Industrial Engineering");
             comboBox1.Items.Add("Bachelor Of Science In Electrical Engineering");
             comboBox1.Items.Add("Bachelor Of Science In Electronics Engineering");
+
+
+            //Disable Text Box
+            totalNumunitsTxtBox.Enabled = false;
+            totalTutionfeeTxtBox.Enabled = false;
+            creditUnitsTxtBox.Enabled = false;
+            totalMiscfeeTxtBox.Enabled = false;
+            totalTuitionAndFeeTxtBox.Enabled = false;
+            totalOtherfeeTxtBox.Enabled = false;
 
             ClearTextBoxes(this);
         }
@@ -69,5 +79,66 @@ namespace Lab_2
         {
             ClearTextBoxes(this);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Read values from the input TextBoxes.
+            string courseNumber = courseNumberTxtBox.Text;
+            string courseCode = courseCodeTxtBox.Text;
+            string courseDescription = courseDescTxtBox.Text;
+            string unitLecture = unitLecTxtBox.Text;
+            string unitLaboratory = unitLabTxtBox.Text;
+            string creditUnits = creditUnitsTxtBox.Text;
+            string time = timeTxtBox.Text;
+            string day = dayTxtBox.Text;
+
+            //
+            int unitLec, unitLab, creditunits;
+            unitLec = Convert.ToInt32(unitLecTxtBox.Text);
+            unitLab = Convert.ToInt32(unitLabTxtBox.Text);
+            creditUnits = unitLecture + unitLab;
+            totalUnits += creditUnits;
+           
+
+
+            //List Boxes
+            numListBox.Items.Add(courseNumber);
+            courseCodeListBox.Items.Add(courseCode);
+            courseDescListBox.Items.Add(courseDescription);
+            unitLecListBox.Items.Add(unitLecture);
+            unitLabListBox.Items.Add(unitLaboratory);
+            creditUnitsListBox.Items.Add(creditUnits);
+            timeListBox.Items.Add(time);
+            dayListBox.Items.Add(day);
+
+            //Calculate Butto
+           
+
+        }
+
+        private void calculate_BtnRd(object sender, EventArgs e)
+        {
+            const decimal tuitionFeePerUnit = 1700.00m;
+            int lecunits, labunits, creditunits;
+            double totalTuitionFee, examBooklet, Cisco, computerLab, totalMiscfee, totalTuitionAndFee,;
+
+            
+
+            creditunits = lecunits + labunits;
+            totalTuitionFee = creditunits * 1700;
+            totalMiscfee = examBooklet + Cisco + computerLab;
+            totalTuitionAndFee = totalTuitionFee + totalMiscfee;
+
+            totalMiscfee += creditunits;
+
+            totalNumunitsTxtBox.Text = labunits.ToString("n");
+            creditUnitsListBox.Text = creditunits.ToString("n");
+            totalTutionfeeTxtBox.Text = totalTuitionFee.ToString("n");
+            totalMiscfeeTxtBox.Text = totalMiscfee.ToString("n");
+            totalTuitionAndFeeTxtBox.Text = totalTuitionAndFee.ToString("n");
+
+
+
+
+        }
     }
-}
